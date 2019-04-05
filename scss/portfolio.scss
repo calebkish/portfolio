@@ -80,7 +80,7 @@ header {
     }
 
     .title {
-      // color: $main-color;
+      color: $main-color;
       background: $main-color;
       background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
       background-attachment: fixed;
@@ -223,5 +223,12 @@ header {
 
   .section.double .double-column .fcolumn {
     margin-right: 0;
+  }
+}
+
+@-moz-document url-prefix() {
+  .content .section .title {
+    background-attachment: initial;
+    color: #000;
   }
 }
