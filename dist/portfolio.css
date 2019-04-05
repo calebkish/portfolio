@@ -17,7 +17,9 @@ body {
 }
 
 header {
-  background: #4191FC;
+  background: #00A99D;
+  background-image: linear-gradient(#00A99D, #93278F);
+  background-attachment: fixed;
   padding: 20px;
 }
 
@@ -47,15 +49,28 @@ header .contact p a {
   text-decoration: none;
 }
 
+.content .section::before {
+  background: #00A99D;
+  background-image: linear-gradient(#00A99D, #93278F);
+  background-attachment: fixed;
+  padding-top: 3px;
+  width: 100%;
+  content: "";
+  display: inline-block;
+}
 .content .section {
   margin: 20px 20px 50px 20px;
-  border-top: 3px solid #4191FC;
 }
 .content .section .subsection {
   margin-bottom: 20px;
 }
 .content .section .title {
-  color: #4191FC;
+  background: #00A99D;
+  background-image: linear-gradient(#00A99D, #93278F);
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   font-size: 26px;
   margin-bottom: 5px;
   padding-top: 5px;
@@ -63,10 +78,6 @@ header .contact p a {
 .content .section .subtitle {
   font-size: 18px;
   font-weight: 800;
-}
-.content .section .subtitle a {
-  color: #000;
-  text-decoration: underline;
 }
 .content .section .emphasis {
   font-style: italic;
@@ -82,22 +93,30 @@ header .contact p a {
 .content .section ul li {
   margin-bottom: 5px;
 }
-.content .section img {
-  width: 100%;
-  border: 2px solid #000;
-  border-radius: 10px;
-}
 .content .section button {
   border: none;
   padding: 7px;
   border-radius: 10px;
-  background: #4191FC;
+  background: #00A99D;
+  background-image: linear-gradient(#00A99D, #93278F);
+  background-attachment: fixed;
   color: #fff;
   cursor: pointer;
   margin-right: 3px;
 }
 .content .section a {
   text-decoration: none;
+}
+.content .section a .outer {
+  background: #00A99D;
+  background-image: linear-gradient(#00A99D, #93278F);
+  background-attachment: fixed;
+  border-radius: 10px;
+  padding: 5px 5px 1px 5px;
+}
+.content .section img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 @media (min-width: 630px) {
@@ -135,6 +154,41 @@ header .contact p a {
     margin-right: 30px;
   }
   .section.double .double-column .fcolumn:last-child {
+    margin-right: 0;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .content .section p.title {
+    background: #fff;
+    background-image: none;
+    color: #000;
+  }
+}
+@media (-ms-high-contrast: none) and (min-width: 1100px), (-ms-high-contrast: active) and (min-width: 1100px) {
+  .content .section .image {
+    width: 500px;
+  }
+
+  .section.double .double-column {
+    display: block;
+  }
+
+  .section.double .double-column .fcolumn {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 0\0 ) and (min-resolution: 0.001dpcm) {
+  .content .section p.title {
+    background: #fff;
+    background-image: none;
+    color: #000;
+  }
+
+  .content .section img {
+    border: none;
+  }
+
+  .section.double .double-column .fcolumn {
     margin-right: 0;
   }
 }

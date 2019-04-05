@@ -1,3 +1,8 @@
+$main-color: #00A99D;
+$gradient-color-top: #00A99D;
+$gradient-color-bottom: #93278F;
+// #38c1aa
+
 .mg-b-10 {
   margin-bottom: 10px;
 }
@@ -17,7 +22,9 @@ body {
 }
 
 header {
-  background: #4191FC;
+  background: $main-color;
+  background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
+  background-attachment: fixed;
   padding: 20px;
 }
 
@@ -55,16 +62,31 @@ header {
 
 
 .content {
+  .section::before {
+    background: $main-color;
+    background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
+    background-attachment: fixed;
+    padding-top: 3px;
+    width: 100%;
+    content: "";
+    display: inline-block;
+  }
+  
   .section {
     margin: 20px 20px 50px 20px;
-    border-top: 3px solid #4191FC;
 
     .subsection {
       margin-bottom: 20px;
     }
 
     .title {
-      color: #4191FC;
+      // color: $main-color;
+      background: $main-color;
+      background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
+      background-attachment: fixed;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
       font-size: 26px;
       margin-bottom: 5px;
       padding-top: 5px;
@@ -72,11 +94,6 @@ header {
     .subtitle {
       font-size: 18px;
       font-weight: 800;
-
-      a {
-        color: #000;
-        text-decoration: underline;
-      }
     }
     .emphasis {
       font-style: italic;
@@ -93,22 +110,30 @@ header {
         margin-bottom: 5px;
       }
     }
-    img {
-      width: 100%;
-      border: 2px solid #000;
-      border-radius: 10px;
-    }
     button {
       border: none;
       padding: 7px;
       border-radius: 10px;
-      background: #4191FC;
+      background: $main-color;
+      background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
+      background-attachment: fixed;
       color: #fff;
       cursor: pointer;
       margin-right: 3px;
     }
     a {
       text-decoration: none;
+    }
+    a .outer {
+      background: $main-color;
+      background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
+      background-attachment: fixed;
+      border-radius: 10px;
+      padding: 5px 5px 1px 5px;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
     }
   }
 }
@@ -125,8 +150,6 @@ header {
 }
 
 @media (min-width: 1100px) {
-  
-
   .wrapper {
     width: 1000px;
   }
@@ -159,5 +182,46 @@ header {
         }
       }
     }
+  }
+}
+
+// IE 10 and 11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .content .section p.title {
+    background: #fff;
+    background-image: none;
+    color: #000;
+  }
+
+  @media (min-width: 1100px) {
+    
+    .content .section .image {
+      width: 500px;
+    }
+
+    .section.double .double-column {
+      display: block;
+    }
+
+    .section.double .double-column .fcolumn {
+      margin-right: 0;
+    }
+  }
+}
+
+// IE 9
+@media all and (min-width:0\0) and (min-resolution:0.001dpcm) {
+  .content .section p.title {
+    background: #fff;
+    background-image: none;
+    color: #000;
+  }
+
+  .content .section img {
+    border: none;
+  }
+
+  .section.double .double-column .fcolumn {
+    margin-right: 0;
   }
 }
