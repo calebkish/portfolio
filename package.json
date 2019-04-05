@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "sass": "sass --watch scss/portfolio.scss dist/portfolio.css"
   },
   "repository": {
     "type": "git",
