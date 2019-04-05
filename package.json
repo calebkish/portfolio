@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deply": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebkish/Portfolio.git"
+  },
+  "author": "Caleb Kish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calebkish/Portfolio/issues"
+  },
+  "homepage": "https://github.com/calebkish/Portfolio"
+}
