@@ -1,0 +1,142 @@
+.mg-b-10 {
+  margin-bottom: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+header {
+  background: #4191FC;
+  padding: 20px;
+}
+
+header p.objective {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+header .title {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+header .contact {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #fff;
+  padding-top: 15px;
+}
+header .contact p {
+  padding: 5px 0;
+  text-align: center;
+  color: #fff;
+}
+header .contact p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content .section {
+  margin: 20px 20px 50px 20px;
+  border-top: 3px solid #4191FC;
+}
+.content .section .subsection {
+  margin-bottom: 20px;
+}
+.content .section .title {
+  color: #4191FC;
+  font-size: 26px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+.content .section .subtitle {
+  font-size: 18px;
+  font-weight: 800;
+}
+.content .section .subtitle a {
+  color: #000;
+  text-decoration: underline;
+}
+.content .section .emphasis {
+  font-style: italic;
+}
+.content .section p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.content .section ul {
+  margin-top: 5px;
+  padding-left: 20px;
+}
+.content .section ul li {
+  margin-bottom: 5px;
+}
+.content .section img {
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.content .section button {
+  border: none;
+  padding: 7px;
+  border-radius: 10px;
+  background: #4191FC;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 3px;
+}
+.content .section a {
+  text-decoration: none;
+}
+
+@media (min-width: 630px) {
+  .wrapper {
+    width: 600px;
+  }
+
+  header {
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+}
+@media (min-width: 1100px) {
+  .wrapper {
+    width: 1000px;
+  }
+
+  header .contact {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content .section .title {
+    font-size: 40px;
+    padding-bottom: 15px;
+  }
+  .content .section .subtitle {
+    font-size: 20px;
+  }
+
+  .section.double .double-column {
+    display: flex;
+  }
+  .section.double .double-column .fcolumn {
+    margin-right: 30px;
+  }
+  .section.double .double-column .fcolumn:last-child {
+    margin-right: 0;
+  }
+}
+
+/*# sourceMappingURL=portfolio.css.map */
