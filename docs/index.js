@@ -4,7 +4,7 @@ var mediaQueryMinWidth = 1100;
 
 class UI {
   static resizeProjDesc() {
-    var projects = $$('.fcolumn .subsection p.desc');
+    var projects = $$('.projects__wrapper .subsection p.desc');
 
     if ($('.page').offsetWidth >= mediaQueryMinWidth) {
       var max = 0;
