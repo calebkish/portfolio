@@ -12,6 +12,27 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  cursor: pointer;
+}
+
+#lightbox__image {
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 header {
   width: 100%;
   background: white;
@@ -215,18 +236,20 @@ section {
 }
 
 .photo-grid {
-  display: flex;
-  flex-wrap: wrap;
-
+  max-width: 900px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
   justify-content: center;
   align-items: center;
 }
 
-.photo-grid img {
-  border-radius: 20px;
-  object-fit: cover;
-  margin: 10px;
-  width: 100%;
+.photo  {
+  background-size: cover;
+  background-position: center center;
+  padding-top: 100%;
+  cursor: pointer;
 }
 
 footer {

@@ -7,11 +7,13 @@
   <link href='css/index-styles.css' rel='stylesheet' />
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Indie+Flower|Roboto" rel="stylesheet">
   <title>CBC Shoes</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src='script.js'></script>
 </head>
 
 <body>
+  <div id="lightbox">
+    <img id="lightbox__image">
+  </div>
+  
   <header>
     <div class='header-container'>
       <img class='logo' src='logos/cbc-logo-100px.png' alt='CBC Logo' />
@@ -84,13 +86,15 @@
     <div class='gallery-container'>
       <h1 class='gallery-title'>Gallery</h1>
       <div class='photo-grid'>
-        <img src='shoes/jazz-1.jpg' alt='' />
-        <img src='shoes/jazz-2.jpg' alt='' />
-        <img src='shoes/naruto-1.jpg' alt='' />
-        <img src='shoes/naruto-2.jpg' alt='' />
-        <img src='shoes/purple-flower.jpg' alt='' />
-        <img src='shoes/sunflower.jpg' alt='' />
-        <img src='shoes/white-shoes.jpg' alt='' />
+        <div class="photo"></div>
+        <div class="photo"></div>
+        <div class="photo"></div>
+        <div class="photo"></div>
+        <div class="photo"></div>
+        <div class="photo"></div>
+        <div class="photo"></div>
+        <div class="photo"></div>
+        <div class="photo"></div>
       </div>
     </div>
   </div>
@@ -110,6 +114,10 @@
       </p>
     </div>
   </footer>
+
+  <script src="lightbox.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src='script.js'></script>
 </body>
 
 </html>
