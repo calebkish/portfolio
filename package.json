@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d docs",
-    "sass": "sass --watch sass:dist/css"
+    "sass": "sass --watch sass:docs/"
   },
   "repository": {
     "type": "git",
