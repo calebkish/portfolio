@@ -182,6 +182,7 @@ header .contact p a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
+    row-gap: 64px;
   }
   .section .projects__wrapper .subsection {
     margin-bottom: 0px;
