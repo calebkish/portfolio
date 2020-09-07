@@ -1,6 +1,9 @@
 $main-color: #00A99D;
 $gradient-color-top: #00A99D;
 $gradient-color-bottom: #93278F;
+$bg-color: rgb(16, 18, 22);
+$fg-color: #fff;
+$gradient: linear-gradient(135deg, $gradient-color-bottom, $gradient-color-top);
 
 .mg-b-10 {
   margin-bottom: 10px;
@@ -14,6 +17,7 @@ $gradient-color-bottom: #93278F;
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background: $bg-color;
 }
 
 .wrapper::before {
@@ -24,7 +28,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url('images/dots.jpg');
+    background: url('images/dots-1000-dark.jpg'), $bg-color;
     background-size: cover;
     opacity: 0.025;
 }
@@ -34,9 +38,9 @@ body {
 }
 
 header {
-  background: $main-color;
-  background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
-  background-attachment: fixed;
+  background: #202020;
+  background-image: linear-gradient(135deg, $gradient-color-bottom, $gradient-color-top);
+  // background-attachment: fixed;
   padding: 20px;
 }
 
@@ -68,8 +72,8 @@ header {
   .contact {
     display: grid;
     grid-template-columns: 50% 50%;
-    border-top: 2px solid #fff;
-    padding-top: 15px;
+    // border-top: 2px solid #fff;
+    // padding-top: 15px;
 
     p {
       padding: 5px 0;
@@ -86,6 +90,8 @@ header {
 
 
 .content {
+  color: $fg-color;
+
   .resume-link {
     color: #00A99D;
     width: 100%;
@@ -96,7 +102,7 @@ header {
   
   .section::before {
     background: $main-color;
-    background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
+    background-image: $gradient;
     background-attachment: fixed;
     padding-top: 3px;
     width: 100%;
@@ -105,20 +111,21 @@ header {
   }
   
   .section {
-    margin: 20px 20px 50px 20px;
+    margin: 60px 20px 60px 20px;
 
     .subsection {
       margin-bottom: 40px;
     }
 
     .title {
-      color: $main-color;
-      background: $main-color;
-      background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
-      background-attachment: fixed;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
+      // color: $main-color;
+      // background: $main-color;
+      // background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
+      // background-attachment: fixed;
+      // background-clip: text;
+      // -webkit-background-clip: text;
+      color: $fg-color;
+      font-weight: bold;
       font-size: 26px;
       margin-bottom: 5px;
       padding-top: 20px;
@@ -149,7 +156,7 @@ header {
       padding: 7px;
       border-radius: 10px;
       background: $main-color;
-      background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
+      background-image: $gradient;
       background-attachment: fixed;
       color: #fff;
       cursor: pointer;
@@ -160,7 +167,7 @@ header {
     }
     a .outer {
       background: $main-color;
-      background-image: linear-gradient($gradient-color-top, $gradient-color-bottom);
+      background-image: $gradient;
       background-attachment: fixed;
       border-radius: 10px;
       padding: 5px 5px 1px 5px;
@@ -272,9 +279,9 @@ header {
   }
 }
 
-@-moz-document url-prefix() {
-  .content .section .title {
-    background-attachment: initial;
-    color: #000;
-  }
-}
+// @-moz-document url-prefix() {
+//   .content .section .title {
+//     background-attachment: initial;
+//     color: #000;
+//   }
+// }
