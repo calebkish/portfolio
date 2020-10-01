@@ -2,22 +2,19 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "deploy": "gh-pages -d docs",
-    "sass": "sass --watch sass:docs/"
+    "sass": "sass --watch src/index.scss src/index.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/calebkish/Portfolio.git"
   },
-  "author": "Caleb Kish",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/calebkish/Portfolio/issues"
   },
-  "homepage": "https://github.com/calebkish/Portfolio",
-  "dependencies": {
-    "gh-pages": "^2.0.1"
-  }
+  "homepage": "https://github.com/calebkish/Portfolio#readme"
 }
