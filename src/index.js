@@ -1,33 +1,28 @@
-var $ = document.querySelector.bind(document);
-var $$ = document.querySelectorAll.bind(document);
-var mediaQueryMinWidth = 1100;
+const projDescs = document.querySelectorAll(
+  ".projects__wrapper .subsection .desc"
+);
 
-class UI {
-  static resizeProjDesc() {
-    var projects = $$('.projects__wrapper .subsection p.desc');
-
-    if ($('.page').offsetWidth >= mediaQueryMinWidth) {
-      var max = 0;
-      projects.forEach(function (project) {
-        if (project.clientHeight > max)
-          max = project.clientHeight;
-      });
-
-      projects.forEach(function (project) {
-        project.style.minHeight = max + "px";
-      });
-    } else {
-      projects.forEach(function (project) {
-        project.style.minHeight = null;
-      });
-    }
+const setProjDescHeight = () => {
+  if (document.body.clientWidth <= 800) {
+    projDescs.forEach((desc) => {
+      desc.style.height = "initial";
+    });
+    return;
   }
-}
 
-window.addEventListener("load", function () {
-  UI.resizeProjDesc();
-});
+  let maxDescHeight = 0;
+  projDescs.forEach((desc) => {
+    if (desc.clientHeight > maxDescHeight) maxDescHeight = desc.clientHeight;
+  });
 
-window.addEventListener("resize", function () {
-  UI.resizeProjDesc();
-});
+  projDescs.forEach((desc) => {
+    desc.style.height = maxDescHeight + "px";
+  });
+};
+
+// Runs when the document loads.
+setTimeout(setProjDescHeight, 0);
+
+// Runs when the window is resized.
+window.addEventListener("resize", setProjDescHeight);
+
