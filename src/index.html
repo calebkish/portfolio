@@ -11,14 +11,15 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <script src="index.js" defer></script>
   </head>
 
   <body>
     <div class="page">
       <div class="wrapper">
         <header>
-          <p class="title">caleb kish's webpage</p>
-          <p class="header-text">welcome to my glorified resume</p>
+          <p class="title">caleb kish</p>
+          <p id="title" class="header-text"></p>
 
           <div class="contact">
             <p>
@@ -56,33 +57,44 @@
           <div class="section">
             <p class="title">Work Experience</p>
             <div class="subsection">
+              <p class="subtitle">Associate Software Engineer</p>
+              <p class="emphasis">Rocket Mortgage</p>
+              <p>May 2021 - Current</p>
+              <ul>
+                <li>
+                  Main technologies used: Angular, TypeScript, CSS/SASS, HTML,
+                  C#, ASP.NET Core, AWS, Terraform, CircleCI
+                </li>
+              </ul>
+            </div>
+            <div class="subsection">
               <p class="subtitle">Software Engineer Intern</p>
               <p class="emphasis">Quicken Loans</p>
               <p>June 2020 - Aug 2020</p>
               <ul>
                 <li>
                   Developed internal web-based tooling using ASP.NET Core (C#)
-                  that streamlines product deployment process.
+                  that assists with product deployment process.
                 </li>
                 <li>
                   Deployed web-based tooling with Terraform onto AWS (Elastic
-                  Beanstalk). Used CircleCI for automatic code deployment.
+                  Beanstalk). Used CircleCI for code deployment.
                 </li>
                 <li>
                   Main technologies used: C#, ASP.NET Core, AWS, Terraform,
-                  Linux tooling, POSIX shell, JavaScript
+                  POSIX shell, JavaScript
                 </li>
               </ul>
             </div>
             <div class="subsection">
-              <p class="subtitle">Semantic Web Developer</p>
+              <p class="subtitle">Web Developer</p>
               <p class="emphasis">
                 Matrix: Center for Digital Humanities and Social Sciences
               </p>
               <p>Sep 2019 - Apr 2020</p>
               <ul>
                 <li>
-                  Full-stack and semantic web development for humanities-related
+                  Full-stack web development for humanities-related
                   research projects.
                 </li>
                 <li>
@@ -98,25 +110,16 @@
               <p>Feb 2018 - Aug 2018</p>
               <ul>
                 <li>
-                  Developed front-end for commercial registration sites using
-                  HTML, CSS/SASS, and JavaScript for international clients
-                  (General Motors, Hyundai, Chevrolet, Huntington, etc).
+                  Developed front-ends for clients using HTML, CSS/SASS, and JavaScript.
                 </li>
                 <li>
-                  Significantly improved registration site creation turnaround
-                  time through build tools using Node.js.
+                  Created a static site generator using Node.js.
                 </li>
                 <li>
-                  Significantly improved and streamlined custom email creation
-                  (HTML & CSS) through build tools using Node.js.
+                  Created build tools for generating custom emails (HTML and CSS) using Node.js.
                 </li>
                 <li>
-                  Fixed bugs and maintained company intranet using ASP.NET (C#)
-                  with Visual Studio.
-                </li>
-                <li>
-                  Helped define our development team's GitHub repository
-                  workflows.
+                  Fixed bugs and maintained company intranet using ASP.NET (C#).
                 </li>
               </ul>
             </div>
@@ -146,8 +149,8 @@
                   </a>
                 </div>
                 <p class="desc">
-                  MERN stack (MongoDB, Express, React, Node.js) web application
-                  that uses a fleshed-out REST API for fetching/posting data.
+                  MERN stack (MongoDB, Express, React, Node.js) social
+                  networking web app for developers.
                 </p>
                 <a
                   href="https://safe-fortress-83003.herokuapp.com/"
@@ -180,13 +183,13 @@
                   </a>
                 </div>
                 <p class="desc">
-                  JAM stack Website for Association for Computing Machinery.
-                  Uses my personal implementations of a static site generator
-                  and hot-reloading for development. Deployed on Netlify.
+                  Website for Association for Computing Machinery at MSU.
+                  Uses my own implementations of a static site generator
+                  and hot-reloading for development.
                 </p>
                 <a href="https://acm.cse.msu.edu" target="_blank">
                   <div class="outer">
-                    <img src="images/acm-2.jpg" alt="Developer Connector" />
+                    <img src="images/acm-2.jpg" alt="ACM" />
                   </div>
                 </a>
               </div>

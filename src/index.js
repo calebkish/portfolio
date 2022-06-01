@@ -1,28 +1,20 @@
-const projDescs = document.querySelectorAll(
-  ".projects__wrapper .subsection .desc"
-);
+const titles = [
+  'professional <code>$HOME</code> renovator',
+  'yak shaving enthusiast',
+  'post-premature optimizer'
+];
 
-const setProjDescHeight = () => {
-  if (document.body.clientWidth <= 800) {
-    projDescs.forEach((desc) => {
-      desc.style.height = "initial";
-    });
-    return;
-  }
+const titleEl = document.getElementById('title');
 
-  let maxDescHeight = 0;
-  projDescs.forEach((desc) => {
-    if (desc.clientHeight > maxDescHeight) maxDescHeight = desc.clientHeight;
-  });
+let currTitleIndex = 0;
 
-  projDescs.forEach((desc) => {
-    desc.style.height = maxDescHeight + "px";
-  });
-};
+titleEl.innerHTML = titles[currTitleIndex];
 
-// Runs when the document loads.
-setTimeout(setProjDescHeight, 0);
-
-// Runs when the window is resized.
-window.addEventListener("resize", setProjDescHeight);
-
+titleEl.addEventListener('click', () => {
+  titleEl.classList.add('active');
+  currTitleIndex = (currTitleIndex + 1) % titles.length;
+  titleEl.innerHTML = titles[currTitleIndex];
+  setTimeout(() => {
+    titleEl.classList.remove('active');
+  }, 200);
+});

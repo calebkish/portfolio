@@ -34,7 +34,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #101216;
+  background: rgb(16, 18, 22);
 }
 
 .wrapper {
@@ -48,6 +48,17 @@ a {
 
 header {
   margin: 20px 0;
+}
+header #title {
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+  padding: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+header #title.active {
+  background-color: #1F2530;
 }
 header .header-text {
   color: #d5d6ff;

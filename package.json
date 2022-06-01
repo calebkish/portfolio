@@ -2,8 +2,9 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "sass": "^1.52.1"
+  },
   "scripts": {
     "sass": "sass --watch src/index.scss src/index.css"
   },

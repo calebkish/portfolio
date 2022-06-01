@@ -61,42 +61,54 @@ a {
 }
 
 header {
-	margin: 20px 0;
+  #title {
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in-out;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  #title.active {
+    background-color: #1F2530;
+  }
 
-	.header-text {
-		color: #d5d6ff;
-		font-size: 14px;
-	}
+  margin: 20px 0;
+
+  .header-text {
+    color: #d5d6ff;
+    font-size: 14px;
+  }
 
   .title {
     color: #fff;
     font-size: 30px;
-	font-weight: bold;
+    font-weight: bold;
   }
 
   .contact {
-	color: #e6e7ff;
+    color: #e6e7ff;
     display: flex;
-	flex-direction: column;
-	margin: 20px 30px;
+    flex-direction: column;
+    margin: 20px 30px;
 
-	.email-symbol {
-		color: #aaa;
-		font-size: 14px;
-	}
+    .email-symbol {
+      color: #aaa;
+      font-size: 14px;
+    }
 
     p {
       padding: 5px 0 5px 0;
-	  color: #e6e7ff;
+    color: #e6e7ff;
   
       a {
         text-decoration: none;
-		color: #e6e7ff;
+    color: #e6e7ff;
       }
 
-	  i {
-		margin-right: 10px;
-	  }
+    i {
+    margin-right: 10px;
+    }
 
     } 
   }
@@ -114,9 +126,9 @@ header {
     font-size: 25px;
   }
 
-	.section:first-child {
-		margin-top: 0;
-	}
+  .section:first-child {
+    margin-top: 0;
+  }
 
   .section::before {
     background: $main-color;
@@ -137,7 +149,7 @@ header {
     }
 
     .title {
-	  color: #e6e7ff;
+    color: #e6e7ff;
       font-weight: bold;
       font-size: 26px;
       margin-bottom: 5px;
@@ -193,17 +205,17 @@ header {
 }
 
 @media screen and (min-width: 800px) {
-	.wrapper {
-		max-width: 800px;
-	}
+  .wrapper {
+    max-width: 800px;
+  }
 
-	.projects__wrapper {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 30px;
+  .projects__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
 
-		.desc {
-			height: 96px;
-		}
-	}
+    .desc {
+      height: 96px;
+    }
+  }
 }
