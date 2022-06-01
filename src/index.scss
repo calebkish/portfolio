@@ -68,6 +68,7 @@ header {
     padding: 5px;
     border-radius: 3px;
     display: inline-block;
+    user-select: none;
   }
   #title.active {
     background-color: #1F2530;
